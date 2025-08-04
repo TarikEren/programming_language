@@ -1,0 +1,3 @@
+/mnt/f/repos/c-c++/programming-language/cmake-build-debug/CMakeFiles/programming_language.dir
+/mnt/f/repos/c-c++/programming-language/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/f/repos/c-c++/programming-language/cmake-build-debug/CMakeFiles/rebuild_cache.dir
