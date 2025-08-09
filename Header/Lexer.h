@@ -133,6 +133,10 @@ public:
      * @returns None
      */
     void Tokenize();
+
+    std::vector<Token> GetTokens() {
+        return this->Tokens;
+    }
 };
 
 #endif

@@ -69,6 +69,7 @@ struct Token {
     TokenType type;
     std::string lexeme;
     int line, col;
+    [[nodiscard]] std::string TokenToString() const;
 };
 
 #endif

@@ -6,4 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(programming_language main.cpp
         Source/Lexer.cpp
         Header/Lexer.h
-        Header/Token.h)
+        Header/Token.h
+        Header/Parser.h
+        Source/Parser.cpp
+        Source/Token.cpp
+)
