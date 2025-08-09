@@ -17,16 +17,16 @@ enum LexerMode {
  * Handles and contains various tokenizer related functions. Tokenizes its text field using the tokenize() function
  */
 class Lexer {
-    int index{},            /// Current char's index
-        line = 1,           /// Current char's line
-        col = 1,            /// Current char's column
-        tabSize{},          /// Each tab's size in the file
-        startCol{};         /// The starting position of a keyword or token
-    size_t textSize{};      /// Size of the text to tokenize
-    char current{};         /// Current character
-    std::string buffer{},   /// Buffer to hold the words
-                text{};     /// Text to tokenize
-    LexerMode mode;         /// Defines how the lexer should run
+    int index{},                /// Current char's index
+        line = 1,               /// Current char's line
+        col = 1,                /// Current char's column
+        tabSize{},              /// Each tab's size in the file
+        startCol{};             /// The starting position of a keyword or token
+    size_t textSize{};          /// Size of the text to tokenize
+    char current{};             /// Current character
+    std::string buffer{},       /// Buffer to hold the words
+                text{};         /// Text to tokenize
+    LexerMode mode;             /// Defines how the lexer should run
     std::vector<Token> Tokens;  /// Vector for the tokens
 
     /**

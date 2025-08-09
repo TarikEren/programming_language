@@ -329,7 +329,7 @@ void Lexer::AppendToken(const TokenType type) {
 }
 
 void Lexer::AppendToken(const TokenType type, const std::string &lexeme) {
-    this->Tokens.push_back({type, lexeme, this->line, this->startCol});
+    this->Tokens.push_back({type, lexeme, {this->line, this->startCol}});
     this->buffer.clear();
     this->StepForward();
     this->col++;

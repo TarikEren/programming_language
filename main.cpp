@@ -6,6 +6,7 @@
 // TODO: Implement AST tokens and token types
 // TODO: Implement AST token vector and a get function for sending it out of the class
 // TODO: Implement the parser
+// NOTE: Adding end positions to tokens may be a good idea
 
 int main() {
     Lexer lexer(LexerMode::DEBUG, 4);

@@ -2,6 +2,8 @@
 #define TOKEN_H
 #include <string>
 
+#include "Global.h"
+
 enum TokenType {
     // ===== KEYWORDS =====
     INT,
@@ -77,7 +79,7 @@ enum TokenType {
 struct Token {
     TokenType type;
     std::string lexeme;
-    int line, col;
+    Position pos;
     [[nodiscard]] std::string TokenToString() const;
 };
 

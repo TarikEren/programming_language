@@ -10,4 +10,5 @@ add_executable(programming_language main.cpp
         Header/Parser.h
         Source/Parser.cpp
         Source/Token.cpp
+        Header/Global.h
 )

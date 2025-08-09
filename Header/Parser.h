@@ -2,7 +2,14 @@
 #define PARSER_H
 
 #include <vector>
+
+#include "Global.h"
 #include "Token.h"
+
+class ParserToken {
+    // Starting and ending positions
+    Position start{}, end{};
+};
 
 class Parser {
 
