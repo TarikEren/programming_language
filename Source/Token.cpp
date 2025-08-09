@@ -34,8 +34,6 @@ std::string Token::TokenToString() const {
             return std::string("L_CHAR, (").append(this->lexeme).append(")");
         case L_STRING:
             return std::string("L_STRING, (").append(this->lexeme).append(")");
-        case L_BOOLEAN:
-            return std::string("L_BOOLEAN, (").append(this->lexeme).append(")");
         case L_NULL:
             return "L_NULL";
         case PLUS:
@@ -94,12 +92,32 @@ std::string Token::TokenToString() const {
             return ".";
         case HASH:
             return "#";
-        case COMMENT:
-            return "COMMENT";
         case IDENTIFIER:
             return std::string("IDENT, (").append(this->lexeme).append(")");
         case EOF_TOKEN:
             return "EOF";
+        case LPAREN:
+            return "(";
+        case RPAREN:
+            return ")";
+        case LBRACK:
+            return "[";
+        case RBRACK:
+            return "]";
+        case LCURLY:
+            return "{";
+        case RCURLY:
+            return "}";
+        case VOID:
+            return "VOID";
+        case BREAK:
+            return "BREAK";
+        case CONTINUE:
+            return "CONTINUE";
+        case TRUE:
+            return "TRUE";
+        case FALSE:
+            return "FALSE";
         default:
             return "UNKNOWN";
     }

@@ -49,7 +49,6 @@ void Lexer::Tokenize() {
                     this->col++;
                     this->StepForward();
                 } else if (this->Peek() == '/') {
-                    AppendToken(TokenType::COMMENT, "//");
                     while (this->current != '\n' && !this->IsAtEnd()) {
                         this->StepForward();
                     }
@@ -141,6 +140,30 @@ void Lexer::Tokenize() {
             this->startCol = this->col;
                 AppendToken(TokenType::HASH, "#");
             break;
+            case '(':
+                this->startCol = this->col;
+            AppendToken(TokenType::LPAREN, "(");
+            break;
+            case ')':
+                this->startCol = this->col;
+            AppendToken(TokenType::RPAREN, ")");
+            break;
+            case '[':
+                this->startCol = this->col;
+            AppendToken(TokenType::LBRACK, "[");
+            break;
+            case ']':
+                this->startCol = this->col;
+            AppendToken(TokenType::RBRACK, "]");
+            break;
+            case '{':
+                this->startCol = this->col;
+            AppendToken(TokenType::LCURLY, "{");
+            break;
+            case '}':
+                this->startCol = this->col;
+            AppendToken(TokenType::RCURLY, "}");
+            break;
             default:
                 if (this->IsAlpha()) {
                     this->startCol = this->col;
@@ -186,6 +209,21 @@ void Lexer::Tokenize() {
                     }
                     else if (this->buffer == "type") {
                         AppendToken(TokenType::TYPE);
+                    }
+                    else if (this->buffer == "void") {
+                        AppendToken(TokenType::VOID);
+                    }
+                    else if (this->buffer == "break") {
+                        AppendToken(TokenType::BREAK);
+                    }
+                    else if (this->buffer == "continue") {
+                        AppendToken(TokenType::CONTINUE);
+                    }
+                    else if (this->buffer == "true") {
+                        AppendToken(TokenType::TRUE);
+                    }
+                    else if (this->buffer == "false") {
+                        AppendToken(TokenType::FALSE);
                     }
                     else {
                         AppendToken(TokenType::IDENTIFIER);

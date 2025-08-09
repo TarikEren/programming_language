@@ -9,7 +9,7 @@
 
 int main() {
     Lexer lexer(LexerMode::DEBUG, 4);
-    lexer.SetText("int a = 5;");
+    lexer.SetText("break continue true false");
     lexer.Tokenize();
     Parser parser(lexer.GetTokens());
     parser.ParseTokens();

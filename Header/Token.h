@@ -17,12 +17,16 @@ enum TokenType {
     UNION,
     CLASS,
     TYPE,
+    VOID,
+    BREAK,
+    CONTINUE,
+    TRUE,
+    FALSE,
 
     // ===== LITERALS =====
     L_INT,
     L_CHAR,
     L_STRING,
-    L_BOOLEAN,
     L_NULL,
 
     // ===== ARITHMETIC =====
@@ -58,9 +62,14 @@ enum TokenType {
     COMMA,
     DOT,
     HASH,
+    LPAREN,
+    RPAREN,
+    LBRACK,
+    RBRACK,
+    LCURLY,
+    RCURLY,
 
     // ===== OTHER =====
-    COMMENT,        // //, /**/
     IDENTIFIER,     // Generic identifier
     EOF_TOKEN       // End of file
 };
