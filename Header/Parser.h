@@ -6,15 +6,18 @@
 #include "Global.h"
 #include "Token.h"
 
-class ParserToken {
+class ASTToken {
     // Starting and ending positions
     Position start{}, end{};
 };
 
 class Parser {
 
-    // Vector for all tokens
+    // Vector for all tokens to parse
     std::vector<Token> Tokens{};
+    
+    // Output tokens
+    std::vector<ASTToken> OutputTokens{};
 
     // Index for the loop
     int index{};
